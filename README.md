@@ -1,7 +1,8 @@
 ### [https://edgarjayet.com](https://edgarjayet.com)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1ce933c7-c013-4494-a5e0-a281ccfcbcde/deploy-status)](https://app.netlify.com/sites/edgarjayet/deploys)
+### CMS: [https://edgarjayet.herokuapp.com/admin](https://edgarjayet.herokuapp.com/admin)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1ce933c7-c013-4494-a5e0-a281ccfcbcde/deploy-status)](https://app.netlify.com/sites/edgarjayet/deploys)
 
 ## 🚀 Development
 
@@ -24,7 +25,7 @@
     gatsby develop
     ```
 
-1.  **Open the source code and start editing!**
+3.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 

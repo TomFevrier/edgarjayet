@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: 'Edgar Jayet',
-        description: '',
+        description: 'Edgar Jayet est étudiant en Architecture Intérieure et Design à l\'Ecole Camondo. Il développe sa propre activité en exporant tous les champs de la création.',
         author: 'Edgar Jayet',
     },
     plugins: [

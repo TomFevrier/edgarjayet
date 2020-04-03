@@ -72,6 +72,10 @@
     margin: 0.2rem 0;
 }
 
+.title .yearMobile {
+	display: none;
+}
+
 .content {
 	width: 80%;
 	text-align: justify;
@@ -149,6 +153,18 @@
 
 	.text .title, .text .content {
 		width: 100%;
+	}
+
+	.text .title {
+		white-space: normal;
+	}
+
+	.text .title .year {
+		display: none;
+	}
+
+	.text .title .yearMobile {
+		display: block;
 	}
 
 	.highlight {

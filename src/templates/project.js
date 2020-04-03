@@ -10,7 +10,7 @@ import Header from '../components/header';
 import styles from './project.module.css';
 
 const ProjectTemplate = ({ data }) => {
-	const { title, subtitle, location, date, content, content_eng, highlight, highlight_eng, imageMain, imageSecondary } = data.strapiProject;
+	const { title, subtitle, location, date, content, content_eng, imageMain, imageSecondary } = data.strapiProject;
 	const pictures = Object.entries(data.strapiProject).filter(([key, value]) => key.includes('picture') && value);
 	const portraits = pictures.filter(([key, value]) => value.childImageSharp.fluid.aspectRatio < 1);
 	const landscapes = pictures.filter(([key, value]) => value.childImageSharp.fluid.aspectRatio >= 1)
@@ -37,6 +37,7 @@ const ProjectTemplate = ({ data }) => {
 									<span className={styles.year}>{new Date(date).getFullYear()}</span>
 								</h3>
 								<h4>{subtitle}</h4>
+								<h4 className={styles.yearMobile}>{new Date(date).getFullYear()}</h4>
 							</div>
 			                <div className={styles.content}>
 								<div>{content}</div>
@@ -52,7 +53,7 @@ const ProjectTemplate = ({ data }) => {
 							/>
 						</li>
 					}
-					{highlight &&
+					{/* highlight &&
 						<li style={landscapeIndex < landscapes.length ? {
 							width: `${40 * landscapes[landscapeIndex][1].childImageSharp.fluid.aspectRatio}vh`
 						} : {}}>
@@ -66,7 +67,7 @@ const ProjectTemplate = ({ data }) => {
 								<div className={styles.english}>{highlight_eng}</div>
 							</div>
 			            </li>
-					}
+					*/}
 					{portraitIndex < portraits.length &&
 						<li style={{ width: `${60 * portraits[portraitIndex][1].childImageSharp.fluid.aspectRatio}vh` }}>
 						   <Img
@@ -193,8 +194,6 @@ export const query = graphql`
             location
 			content
 			content_eng
-            highlight
-			highlight_eng
 			imageMain {
 				childImageSharp {
 					fluid(maxWidth: 2500) {

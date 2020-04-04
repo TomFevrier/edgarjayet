@@ -21,9 +21,10 @@ header h1 {
 	header {
 		position: fixed;
 	}
-	@supports (-webkit-overflow-scrolling: touch) {
-		header {
-			position: absolute !important;
-		}
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+	header {
+		position: absolute !important;
 	}
 }

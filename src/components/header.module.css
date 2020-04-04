@@ -20,7 +20,10 @@ header h1 {
 @media only screen and (max-width: 600px) {
 	header {
 		position: fixed;
-		transform: translate3d(0, 0, 0);
 	}
-
+	@supports (-webkit-overflow-scrolling: touch) {
+		header {
+			position: absolute !important;
+		}
+	}
 }

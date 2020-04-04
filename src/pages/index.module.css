@@ -212,7 +212,7 @@ aside {
 }
 
 @supports (-webkit-overflow-scrolling: touch) {
-	.burger {
+	.burger, .menuWrapper {
 		position: absolute !important;
 	}
 }

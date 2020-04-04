@@ -61,8 +61,15 @@ class IndexPage extends React.Component {
         return (
             <Layout>
 				<SEO title="Portfolio" />
+				<Header onMouseEnter={this.showMenu} onClick={() => this.setState({ filter: 'all' })} />
+				<div
+					className={styles.burger}
+					onClick={this.toggleMobileMenu}
+					ref={this.burger}
+				>
+					<div className={styles.line}></div>
+				</div>
 				<aside>
-	                <Header onMouseEnter={this.showMenu} onClick={() => this.setState({ filter: 'all' })} />
 					<div
 						className={styles.menuWrapper}
 						ref={this.menu}
@@ -147,13 +154,6 @@ class IndexPage extends React.Component {
 
 						   </li>
 	                    </ul>
-	                </div>
-					<div
-						className={styles.burger}
-						onClick={this.toggleMobileMenu}
-						ref={this.burger}
-					>
-	                    <div className={styles.line}></div>
 	                </div>
 				</aside>
                 <article className={styles.article}>

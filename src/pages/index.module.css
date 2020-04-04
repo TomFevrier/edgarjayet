@@ -92,6 +92,7 @@ aside {
     width: 2rem;
 	height: 1.7rem;
 	position: fixed;
+	transform: translate3d(0, 0, 0);
 	right: 0;
 	top: 0.3rem;
 	margin: 2rem 2rem 2rem 0;
@@ -152,6 +153,7 @@ aside {
 	.menuWrapper {
 		height: 100vh;
 		position: fixed;
+		transform: translate3d(0, 0, 0);
 		width: 100%;
 		background-color: rgba(255, 255, 255, 0.8);
 		padding-top: 6rem;

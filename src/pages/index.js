@@ -138,7 +138,7 @@ class IndexPage extends React.Component {
 							<li className={styles.credit}>
 								{`© ${new Date().getFullYear()} - `}
 								<a
-								   href="https:/tomfevrier.io"
+								   href="https://tomfevrier.io"
 								   target="_blank"
 								   rel="noopener noreferrer"
 								>

@@ -11,6 +11,7 @@ import styles from './project.module.css';
 
 const ProjectTemplate = ({ data }) => {
 	const { title, subtitle, location, date, content, content_eng, imageMain, imageSecondary } = data.strapiProject;
+	const publication = data.strapiProject.publication?.internal.description.replace("File \"", "").replace("\"", "");
 	const pictures = Object.entries(data.strapiProject).filter(([key, value]) => key.includes('picture') && value);
 	const portraits = pictures.filter(([key, value]) => value.childImageSharp.fluid.aspectRatio < 1);
 	const landscapes = pictures.filter(([key, value]) => value.childImageSharp.fluid.aspectRatio >= 1)
@@ -40,6 +41,11 @@ const ProjectTemplate = ({ data }) => {
 								<h4 className={styles.yearMobile}>{new Date(date).getFullYear()}</h4>
 							</div>
 			                <div className={styles.content}>
+								{publication &&
+									<p style={{ fontWeight: 'bold' }}>
+										<a href={publication} target="_blank" rel="noopener noreferrer" download>Read here!</a>
+									</p>
+								}
 								<div>{content}</div>
 								<div className={styles.english}>{content_eng}</div>
 							</div>
@@ -194,6 +200,11 @@ export const query = graphql`
             location
 			content
 			content_eng
+			publication {
+				internal {
+					description
+				}
+			}
 			imageMain {
 				childImageSharp {
 					fluid(maxWidth: 2500) {

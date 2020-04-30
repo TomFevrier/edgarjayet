@@ -7,8 +7,7 @@
 [[redirects]]
   from = "/admin"
   to = "https://edgarjayet.herokuapp.com/admin/"
-  status = 200
-  force = true
+  status = 301
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app. 
   ## Not needed for static site generators.
